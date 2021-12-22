@@ -65,28 +65,6 @@ function addMovieAllCaroussel(catagories) {
     }
 }
 
-// Modals
-
-function uploadDataSet(element) {
-    const urlMovie =  mainEntryUrl + "/" +element.getAttribute('id');
-
-    fetch(urlMovie)
-        .then( function(response) {
-            if (response.ok) {
-                return response.json();
-            }
-        })
-        .then (function(dataInfo) {
-            element.setAttribute("data-info", JSON.stringify(dataInfo));
-
-            element.addEventListener("click", function(e) {
-                e.preventDefault();
-                displayModal(dataInfo);
-            })
-    })
-}
-
-
 // Best movie section //
 
 async function getBetMovieUrl(urlMoviesByScore){
@@ -169,6 +147,19 @@ function setScrollingAllCaroussels (catagoriesToImplement) {
         setScrollingProperties(categorieInfo.name + "-caroussel");
     }
 }
+
+// Switch light / dark themes
+
+function switchTheme(){
+    document.querySelector(".switcher").addEventListener("click", function(e){
+        e.preventDefault();
+        this.classList.toggle("switcher--light-mode");
+        document.getElementsByTagName("body")[0].classList.toggle("white-theme-body");
+        document.getElementsByTagName("main")[0].classList.toggle("white-theme-main");
+        document.getElementsByTagName("header")[0].classList.toggle("white-theme-header");
+    })
+}
+
 
 // Create the modal
 
@@ -264,17 +255,27 @@ function chnageContentIfNone(content) {
     return content;
 }
 
-// Switch light / dark themes
+// Upload dataset for Modals
 
-function switchTheme(){
-    document.querySelector(".switcher").addEventListener("click", function(e){
-        e.preventDefault();
-        this.classList.toggle("switcher--light-mode");
-        document.getElementsByTagName("body")[0].classList.toggle("white-theme-body");
-        document.getElementsByTagName("main")[0].classList.toggle("white-theme-main");
-        document.getElementsByTagName("header")[0].classList.toggle("white-theme-header");
+function uploadDataSet(element) {
+    const urlMovie =  mainEntryUrl + "/" +element.getAttribute('id');
+
+    fetch(urlMovie)
+        .then( function(response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then (function(dataInfo) {
+            element.setAttribute("data-info", JSON.stringify(dataInfo));
+
+            element.addEventListener("click", function(e) {
+                e.preventDefault();
+                displayModal(dataInfo);
+            })
     })
 }
+
 
 // Main function to excecute
 
@@ -282,7 +283,6 @@ function switchTheme(){
 const main = async () => {
 
     switchTheme();
-
     const urlMoviesByScore = mainEntryUrl + "?sort_by=-imdb_score";
     showPreviewBestMovie(urlMoviesByScore);
     addMovieAllCaroussel(catagoriesToImplement);

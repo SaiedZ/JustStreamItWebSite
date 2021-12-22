@@ -76,11 +76,6 @@
   padding: 1em 2em;
 }
 
-/* Add Animation */
-/*@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}*/
 @keyframes animatetop {
   from {
     top: -300px;
