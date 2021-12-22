@@ -9,6 +9,9 @@
     cursor: pointer;
     img {
         width: 2.5em;
+        @include mobile-only{
+            width: 1.5em;
+        }
     }
 }
 .switcher--light-mode{
