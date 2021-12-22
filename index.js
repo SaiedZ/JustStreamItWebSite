@@ -264,13 +264,26 @@ function chnageContentIfNone(content) {
     return content;
 }
 
+// Switch light / dark themes
+
+function switchTheme(){
+    document.querySelector(".switcher").addEventListener("click", function(e){
+        e.preventDefault();
+        this.classList.toggle("switcher--light-mode");
+        document.getElementsByTagName("body")[0].classList.toggle("white-theme-body");
+        document.getElementsByTagName("main")[0].classList.toggle("white-theme-main");
+        document.getElementsByTagName("header")[0].classList.toggle("white-theme-header");
+    })
+}
+
 // Main function to excecute
 
 
 const main = async () => {
 
-    const urlMoviesByScore = mainEntryUrl + "?sort_by=-imdb_score";
+    switchTheme();
 
+    const urlMoviesByScore = mainEntryUrl + "?sort_by=-imdb_score";
     showPreviewBestMovie(urlMoviesByScore);
     addMovieAllCaroussel(catagoriesToImplement);
     setScrollingAllCaroussels (catagoriesToImplement);

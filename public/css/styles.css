@@ -249,7 +249,7 @@ header {
 }
 
 section h1, .modal h1 {
-  color: white;
+  color: #ffffff;
   margin: 1em 0em;
 }
 
@@ -270,7 +270,7 @@ section .btn-scroll {
   position: absolute;
   border: none;
   border-radius: 0.5em;
-  color: white;
+  color: #ffffff;
   background-color: #181d22ce;
   z-index: 1;
   padding: 2em 1em;
