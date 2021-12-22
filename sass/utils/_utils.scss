@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+$primary-color: #E2E2E2;
+$primary-color-white: rgb(0, 0, 0);
+$secondary-color: white;//#7AA93C;
+$secondary-color-white: rgb(0, 0, 0);
+$third-color: #ABB7C4; //#181d22;
+$third-color-white: #3b3e3f;
+$fourth-color: #DD003F;
+$bg-primary: #020D18;
+$bg-primary-white: #ebeef1;
+$bg-secondary: #0F2133;
+$bg-secondary-white : rgb(226, 222, 222);
+$bg-third: #79243c;
+$break-points : (
+  mobile: 599px
+);
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($break-points, mobile)) {
+    @content;
+  }
+}
+
+@mixin width-page {
+  width: 60%;
+  min-width: 599px;
+}
+@mixin width-section {
+  width: 50%;
+  min-width: 599px;
+}
+@mixin bottom_margin_main_elmt {
+  margin-bottom: 5em;
+}
+@mixin top-margin_main_elmt {
+  margin-top: 5em;
+}
+
+@mixin border-left($color: $fourth-color) {
+  padding-left: 0.3em;
+  border-left: $color 0.2em solid;
+}
+
+@mixin padding_top_bottom_elmt ($val) {
+  padding: $val 0em;
+}
+
+@mixin margin_top_bottom_elmt($val) {
+  margin: $val 0em;
+}

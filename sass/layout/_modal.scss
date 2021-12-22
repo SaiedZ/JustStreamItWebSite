@@ -1,0 +1,98 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    @include mobile-only {
+      overflow: scroll;
+    }
+    z-index: 3; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.582); /* Black w/ opacity */
+    
+    /* Modal Content */
+    em {
+      font-weight: bold;
+      font-style: italic ;
+    }
+    &-content {
+      position: relative;
+      background-color: $bg-secondary;
+      margin: auto;
+      padding: 0;
+      border-radius: 1em;
+      @include width-section;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      //-webkit-animation-name: animatetop;
+      //-webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+      @include mobile-only {
+        width: 95%;
+        min-width: auto;
+      }
+    }
+    &__img{
+      float: right;
+      img {
+        border-radius: 0.5em;
+      }
+    }
+    &__contents {
+      list-style:none;
+      li {
+        padding: 0.6em 0em;
+      }
+    }
+    &-header {
+      border-radius: 1em 1em 0em 0em;
+      position: relative;
+      padding: 2px 16px;
+      text-align: center;
+      background-color: $bg-primary;
+      h1{
+        margin: 0.5em;
+      }
+    }
+    
+    &-body {
+      padding: 1em 2em;
+    }
+  }
+  
+  
+/* Add Animation */
+/*@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}*/
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  padding: 0em 0.3em;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  

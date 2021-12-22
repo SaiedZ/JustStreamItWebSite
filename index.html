@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>JustStreamIt - la référence pour consulter les informations et les classements de films</title>
+</head>
+<body> 
+    
+    <header>
+        <div class="container">
+        <div class="container__main-logo">
+            <h2><strong>J</strong>ust<strong>S</strong>tream<strong>I</strong>t</h2>
+        </div>
+        <nav class="container__main-menu">
+            <ul>
+                <li><a href="#" class="link link--helike"><span>Accueil</span></a></li>
+                <li><a href="#" class="link link--helike"><span>Catégories</span></a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="best-movie">
+            <h1>Film le mieux noté</h1>
+            <div class="best-movie__infos">
+                <h2>Titre film</h2>
+                <article>                    
+                    <p>Description du meilleur film</p>
+                    <div>
+                    <button class="best-movie__btn">
+                        <img src="public/pictures/info-png/outline_info_white_18dp.png" alt="info icon"><span>Informations</span>
+                    </button>
+                    </div>
+                </article>
+                <aside>
+                    <p><img src="#" alt="image du meilleur film"></p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <section class="best-movies-caroussel">
+        <h1>Meilleurs films</h1>
+        <button class="btn-scroll left">
+            <i class="material-icons">arrow_back_ios</i> 
+        </button>
+        <ul></ul>
+        <button class="btn-scroll right">
+            <i class="material-icons" style="transform: rotate(180deg)">arrow_back_ios</i> 
+        </button>
+    </section>
+    <section class="animation-caroussel">
+        <h1>Animation</h1>
+        <button class="btn-scroll left">
+            <i class="material-icons">arrow_back_ios</i> 
+        </button>
+        <ul></ul>
+        <button class="btn-scroll right">
+            <i class="material-icons" style="transform: rotate(180deg)">arrow_back_ios</i> 
+        </button>
+    </section>
+    <section class="family-caroussel">
+        <h1>Famille</h1>
+        <button class="btn-scroll left">
+            <i class="material-icons">arrow_back_ios</i> 
+        </button>
+        <ul></ul>
+        <button class="btn-scroll right">
+            <i class="material-icons" style="transform: rotate(180deg)">arrow_back_ios</i> 
+        </button>
+    </section>
+    <section class="history-caroussel">
+        <h1>Histoire</h1>
+        <button class="btn-scroll left">
+            <i class="material-icons">arrow_back_ios</i> 
+        </button>
+        <ul></ul>
+        <button class="btn-scroll right">
+            <i class="material-icons" style="transform: rotate(180deg)">arrow_back_ios</i> 
+        </button>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-titre">Titre</h1>
+                <span class="close">&times;</span>                    
+            </div>
+            <div class="modal-body">
+                <div class="modal__img"></div>
+                <ul class="modal__contents"></ul>
+            </div>
+        </div>
+    
+    </div>
+    <!-- The Modal -->
+
+<script src="index.js"></script>  
+
+</body>
+</html>

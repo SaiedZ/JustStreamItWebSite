@@ -1,0 +1,13 @@
+{
+  "name": "juststreamitwebsite",
+  "version": "1.0.0",
+  "description": "Site de référencement de films.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css",
+    "prefix": "postcss ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "DeiasZ",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
