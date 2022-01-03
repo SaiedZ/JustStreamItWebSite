@@ -15,21 +15,28 @@
 # General info
 
 </br>
-This project is a website with HTML, CSS and JavaScript to display different categories of movies in a carousel. Movie information is retrieved from a REST API with queries using Fecth (JS).
+This project is a website for the JustStreamIt association. This association is known to index and classify films according to different information and categories.
 
+The website was created with HTML, CSS and JavaScript to display different categories of movies in a carousel. Movie information is retrieved from a REST API with queries using Fecth (JS).
+
+The interface should include the following areas:
+
+* "Best film" block, displaying the cover of the film, the summary, as well as a button allowing to display the various information.
+* "Top rated films" block, displaying the covers of the 7 best films in all categories. Buttons should scroll through the movies from left to right, and each click on a cover should display movie information in a window.
+* 3 other blocks following the diagram of the "Top rated films" block, the categories being the choice of the developer.
 The user can scroll right and left on the carousel and choose a movie of their choice. When clicked, a modal window appears and displays all the information for that movie.
 
-For this project, I used JavaScript Vanilla.
 </br>
 
 # Technologies
 
 </br>
-Project has been developed in:
+Project has been developed in: HTML 5, CSS 3, Javascript Vanilla
+</br>
 
-HTML 5
-CSS 3
-Javascript Vanilla
+> The site works on the 3 most used browsers currently (Chrome, Firefox, Edge). Notably thanks to the use of <strong>Autoprefixer</strong> for CSS and a <strong>Transpiler</strong> for JavaScript.
+
+
 </br>
 
 # Installation
