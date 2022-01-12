@@ -1,12 +1,10 @@
-const path = require('path');
+import { resolve } from 'path';
 
-module.exports = {
-  mode: "production",
-  entry: {
-    app: "./javascript/index.js"
-  },
-  output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
-  }
+export const mode = "production";
+export const entry = {
+  app: "./javascript/index.min.js"
+};
+export const output = {
+  filename: "[name].bundle.js",
+  path: resolve(__dirname, "dist")
 };
