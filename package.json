@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/styles.css",
-    "prefix": "postcss ./public/css/styles.css --use autoprefixer -d ./public/css/prefixed/",
+    "prefix": "postcss ./public/css/styles.css --use autoprefixer -d ./public/css-prefixed/",
     "build": "webpack"
   },
   "author": "DeiasZ",
